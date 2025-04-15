@@ -1,0 +1,29 @@
+{
+    "PS01": {
+        "id": "PS01",
+        "name": "Smart Traffic Management System",
+        "description": "Design an IoT-based smart traffic management system that can optimize traffic flow in urban areas by analyzing real-time data and adjusting signal timings to reduce congestion.",
+        "limit": 2,
+        "teams": [
+            "team101",
+            "team303"
+        ],
+        "open": true
+    },
+    "PS02": {
+        "id": "PS02",
+        "name": "Waste Segregation AI",
+        "description": "Develop an AI-powered system that can automatically identify and segregate different types of waste (plastic, metal, paper, organic) to improve recycling efficiency in waste management plants.",
+        "limit": 3,
+        "teams": [],
+        "open": true
+    },
+    "PS03": {
+        "id": "PS03",
+        "name": "Flood Prediction Platform",
+        "description": "Create a machine learning model that can predict potential flood situations based on historical data, weather patterns, and geographical information to provide early warnings to residents in flood-prone areas.",
+        "limit": 2,
+        "teams": [],
+        "open": true
+    }
+}
