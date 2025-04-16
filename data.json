@@ -5,8 +5,8 @@
         "description": "Design an IoT-based smart traffic management system that can optimize traffic flow in urban areas by analyzing real-time data and adjusting signal timings to reduce congestion.",
         "limit": 2,
         "teams": [
-            "team101",
-            "team303"
+            "team202",
+            "team101"
         ],
         "open": true
     },
@@ -15,7 +15,11 @@
         "name": "Waste Segregation AI",
         "description": "Develop an AI-powered system that can automatically identify and segregate different types of waste (plastic, metal, paper, organic) to improve recycling efficiency in waste management plants.",
         "limit": 3,
-        "teams": [],
+        "teams": [
+            "team303",
+            "team505",
+            "team606"
+        ],
         "open": true
     },
     "PS03": {

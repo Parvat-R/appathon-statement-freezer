@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
     <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
         :root {
             --primary-color: #2d81ff;
@@ -25,7 +28,7 @@
             --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
             --success-bg: rgba(85, 204, 122, 0.15);
         }
-        
+
         body {
             font-family: 'Nunito', sans-serif;
             background-color: var(--light-bg);
@@ -33,39 +36,44 @@
             padding-top: 75px;
             line-height: 1.6;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
         }
-        
+
         .navbar {
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             padding: 15px 0;
             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
         }
-        
+
         .navbar-brand {
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
             font-size: 1.4rem;
             color: white;
         }
-        
+
         .nav-link {
             font-weight: 600;
             color: rgba(255, 255, 255, 0.85) !important;
             transition: color 0.3s;
         }
-        
+
         .nav-link:hover {
             color: white !important;
         }
-        
+
         .container.mt-5 {
             padding-top: 1rem;
         }
-        
+
         .page-title {
             font-weight: 800;
             color: var(--dark-text);
@@ -73,7 +81,7 @@
             position: relative;
             display: inline-block;
         }
-        
+
         .page-title:after {
             content: '';
             position: absolute;
@@ -84,7 +92,7 @@
             background-color: var(--primary-color);
             border-radius: 2px;
         }
-        
+
         .problem-card {
             margin-bottom: 25px;
             border: none;
@@ -96,12 +104,12 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .problem-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
         }
-        
+
         .problem-card:before {
             content: '';
             position: absolute;
@@ -111,14 +119,14 @@
             height: 100%;
             background: var(--primary-color);
         }
-        
+
         .problem-card h5 {
             color: var(--dark-text);
             font-size: 1.15rem;
             margin-bottom: 15px;
             padding-left: 5px;
         }
-        
+
         .slots-info {
             color: var(--medium-text);
             font-size: 0.9rem;
@@ -126,7 +134,7 @@
             display: flex;
             align-items: center;
         }
-        
+
         .slots-badge {
             background: rgba(45, 129, 255, 0.1);
             color: var(--primary-color);
@@ -136,7 +144,7 @@
             font-size: 0.8rem;
             margin-left: 8px;
         }
-        
+
         .expand-btn {
             background-color: var(--primary-color);
             border: none;
@@ -146,35 +154,35 @@
             transition: all 0.3s;
             box-shadow: 0 4px 10px rgba(45, 129, 255, 0.3);
         }
-        
+
         .expand-btn:hover {
             background-color: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(45, 129, 255, 0.4);
         }
-        
+
         .selected {
             border: none;
             background-color: var(--success-bg);
             position: relative;
         }
-        
+
         .selected:before {
             background: var(--secondary-color);
         }
-        
+
         .selected h4 {
             color: var(--dark-text);
             margin-bottom: 15px;
             border-bottom: 1px solid rgba(85, 204, 122, 0.3);
             padding-bottom: 10px;
         }
-        
+
         .selected p {
             color: var(--medium-text);
             line-height: 1.7;
         }
-        
+
         .alert-success {
             background-color: var(--success-bg);
             border-color: var(--secondary-color);
@@ -185,7 +193,7 @@
             display: flex;
             align-items: center;
         }
-        
+
         .alert-success:before {
             content: '✓';
             background-color: var(--secondary-color);
@@ -199,43 +207,43 @@
             justify-content: center;
             margin-right: 12px;
         }
-        
+
         .modal-content {
             border-radius: var(--border-radius);
             border: none;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
             overflow: hidden;
         }
-        
+
         .modal-header {
             background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
             color: white;
             border-bottom: none;
             padding: 20px 25px;
         }
-        
+
         .modal-title {
             font-weight: 700;
         }
-        
+
         .modal-body {
             padding: 25px;
         }
-        
+
         .modal-body p {
             margin-bottom: 15px;
             color: var(--medium-text);
         }
-        
+
         .modal-body strong {
             color: var(--dark-text);
         }
-        
+
         .modal-footer {
             border-top: none;
             padding: 15px 25px 25px;
         }
-        
+
         .btn-secondary {
             background-color: #e9ecef;
             color: var(--medium-text);
@@ -245,12 +253,12 @@
             font-weight: 600;
             transition: all 0.3s;
         }
-        
+
         .btn-secondary:hover {
             background-color: #d1d7dc;
             color: var(--dark-text);
         }
-        
+
         .btn-success {
             background-color: var(--secondary-color);
             border: none;
@@ -260,39 +268,42 @@
             transition: all 0.3s;
             box-shadow: 0 4px 10px rgba(85, 204, 122, 0.3);
         }
-        
+
         .btn-success:hover {
             background-color: var(--secondary-dark);
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(85, 204, 122, 0.4);
         }
-        
+
         /* Animation classes */
         .fade-in {
             animation: fadeIn 0.5s;
         }
-        
+
         .bounce-in {
             animation: bounceIn 0.8s;
         }
-        
+
         @media (max-width: 768px) {
             .container {
                 padding-left: 20px;
                 padding-right: 20px;
             }
-            
+
             .problem-card {
                 padding: 15px;
             }
-            
-            .modal-body, .modal-header, .modal-footer {
+
+            .modal-body,
+            .modal-header,
+            .modal-footer {
                 padding-left: 15px;
                 padding-right: 15px;
             }
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
@@ -312,10 +323,10 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="container mt-5">
         <h2 class="page-title mb-4">Problem Statements</h2>
-        
+
         <!-- Selected Problem Statement View -->
         <div id="selected-ps-container" class="fade-in {% if selected_ps %}d-block{% else %}d-none{% endif %}">
             <div class="alert alert-success">
@@ -327,45 +338,50 @@
                 <div class="col-md-8">
                     <div class="problem-card selected bounce-in" id="selected-ps-card">
                         {% if selected_ps %}
-                        <h4>{{ problem_statements[selected_ps]['id'] }}: {{ problem_statements[selected_ps]['name'] }}</h4>
+                        <h4>{{ problem_statements[selected_ps]['id'] }}: {{ problem_statements[selected_ps]['name'] }}
+                        </h4>
                         <p>{{ problem_statements[selected_ps]['description'] }}</p>
                         {% endif %}
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Available Problem Statements View -->
         <div id="available-ps-container" class="{% if not selected_ps %}d-block{% else %}d-none{% endif %}">
             <div class="row" id="problems-container">
                 {% for ps_id, ps in problem_statements.items() %}
+                {% if ps.teams|length != ps.limit %}
                 <div class="col-md-4 ps-card fade-in" data-ps-id="{{ ps.id }}">
                     <div class="problem-card">
                         <h5>{{ ps.id }}: {{ ps.name }}</h5>
                         <div class="slots-info">
-                            Available Slots: 
+                            Available Slots:
                             <span class="slots-badge">
-                                <span class="available-slots">{{ ps.limit - ps.teams|length }}</span>/<span class="limit">{{ ps.limit }}</span>
+                                <span class="available-slots">{{ ps.limit - ps.teams|length }}</span>/<span
+                                    class="limit">{{ ps.limit }}</span>
                             </span>
                         </div>
-                        <button class="btn btn-primary expand-btn" data-bs-toggle="modal" data-bs-target="#psModal" 
-                               data-ps-id="{{ ps.id }}" data-ps-name="{{ ps.name }}" data-ps-desc="{{ ps.description }}">
+                        <button class="btn btn-primary expand-btn" data-bs-toggle="modal" data-bs-target="#psModal"
+                            data-ps-id="{{ ps.id }}" data-ps-name="{{ ps.name }}" data-ps-desc="{{ ps.description }}">
                             View Details
                         </button>
                     </div>
                 </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
     </div>
-    
+
     <!-- Modal -->
     <div class="modal fade" id="psModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="psModalTitle"></h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="psModalBody">
                 </div>
@@ -376,7 +392,7 @@
             </div>
         </div>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Connect to socket.io server
@@ -384,26 +400,26 @@
         let currentPsId = '';
         const teamId = '{{ team_id }}';
         let selectedPs = '{{ selected_ps }}';
-        
+
         // Join a room based on team ID
         socket.emit('join_room', { room: teamId });
-        
+
         // Update problem statements when receiving updates from server
-        socket.on('ps_update', function(problemStatements) {
+        socket.on('ps_update', function (problemStatements) {
             updateProblemStatements(problemStatements);
         });
-        
+
         function updateProblemStatements(problemStatements) {
             // Check if the team has selected a problem statement
             let teamSelectedPs = null;
-            
+
             for (const [psId, psInfo] of Object.entries(problemStatements)) {
                 if (psInfo.teams.includes(teamId)) {
                     teamSelectedPs = psId;
                     break;
                 }
             }
-            
+
             if (teamSelectedPs) {
                 // Update the selected problem statement view
                 const psInfo = problemStatements[teamSelectedPs];
@@ -412,96 +428,98 @@
                     <h4>${psInfo.id}: ${psInfo.name}</h4>
                     <p>${psInfo.description}</p>
                 `;
-                
+
                 // Show selected view, hide available view
                 document.getElementById('selected-ps-container').classList.remove('d-none');
                 document.getElementById('selected-ps-container').classList.add('d-block');
                 document.getElementById('available-ps-container').classList.remove('d-block');
                 document.getElementById('available-ps-container').classList.add('d-none');
-                
+
                 selectedPs = teamSelectedPs;
             } else {
                 // Update all problem statement cards
                 const container = document.getElementById('problems-container');
                 container.innerHTML = '';
-                
+
                 for (const [psId, psInfo] of Object.entries(problemStatements)) {
                     const availableSlots = psInfo.limit - psInfo.teams.length;
-                    
-                    const cardDiv = document.createElement('div');
-                    cardDiv.className = 'col-md-4 ps-card fade-in';
-                    cardDiv.setAttribute('data-ps-id', psId);
-                    
-                    cardDiv.innerHTML = `
+                    if (availableSlots > 0) {
+
+                        const cardDiv = document.createElement('div');
+                        cardDiv.className = 'col-md-4 ps-card fade-in';
+                        cardDiv.setAttribute('data-ps-id', psId);
+
+                        cardDiv.innerHTML = `
                         <div class="problem-card">
                             <h5>${psInfo.id}: ${psInfo.name}</h5>
                             <div class="slots-info">
                                 Available Slots: 
                                 <span class="slots-badge">
                                     <span class="available-slots">${availableSlots}</span>/<span class="limit">${psInfo.limit}</span>
-                                </span>
-                            </div>
-                            <button class="btn btn-primary expand-btn" data-bs-toggle="modal" data-bs-target="#psModal" 
-                                   data-ps-id="${psInfo.id}" data-ps-name="${psInfo.name}" data-ps-desc="${psInfo.description}">
-                                View Details
-                            </button>
-                        </div>
-                    `;
-                    
-                    container.appendChild(cardDiv);
+                                    </span>
+                                    </div>
+                                    <button class="btn btn-primary expand-btn" data-bs-toggle="modal" data-bs-target="#psModal" 
+                                    data-ps-id="${psInfo.id}" data-ps-name="${psInfo.name}" data-ps-desc="${psInfo.description}">
+                                    View Details
+                                    </button>
+                                    </div>
+                                    `;
+
+                        container.appendChild(cardDiv);
+                    }
                 }
-                
+
                 // Add event listeners to new buttons
                 addExpandButtonListeners();
-                
+
                 // Show available view, hide selected view
                 document.getElementById('available-ps-container').classList.remove('d-none');
                 document.getElementById('available-ps-container').classList.add('d-block');
                 document.getElementById('selected-ps-container').classList.remove('d-block');
                 document.getElementById('selected-ps-container').classList.add('d-none');
-                
+
                 selectedPs = '';
             }
         }
-        
+
         function addExpandButtonListeners() {
             // Handle expand button clicks
             document.querySelectorAll('.expand-btn').forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     const psId = this.getAttribute('data-ps-id');
                     const psName = this.getAttribute('data-ps-name');
                     const psDesc = this.getAttribute('data-ps-desc');
-                    
+
                     document.getElementById('psModalTitle').textContent = `${psId}: ${psName}`;
                     document.getElementById('psModalBody').innerHTML = `
                         <p><strong>Problem Statement ID:</strong> ${psId}</p>
                         <p><strong>Problem Statement:</strong> ${psName}</p>
                         <p><strong>Description:</strong> ${psDesc}</p>
                     `;
-                    
+
                     currentPsId = psId;
                 });
             });
         }
-        
+
         // Initial setup of expand buttons
         addExpandButtonListeners();
-        
+
         // Handle freeze button click
-        document.getElementById('freezeButton').addEventListener('click', function() {
+        document.getElementById('freezeButton').addEventListener('click', function () {
             if (confirm('Are you sure you want to select this problem statement? Once confirmed, this choice cannot be changed.')) {
                 socket.emit('select_problem_statement', {
                     team_id: teamId,
                     ps_id: currentPsId
-                }, function(response) {
+                }, function (response) {
                     if (response.success) {
                         // Close the modal
                         const modal = bootstrap.Modal.getInstance(document.getElementById('psModal'));
                         modal.hide();
-                        
+
                         // Update UI with the selected problem statement
                         updateProblemStatements(response.problem_statements);
-                        
+
                         // Show success message
                         alert('Problem statement selected successfully!');
                     } else {
@@ -510,13 +528,14 @@
                 });
             }
         });
-        
+
         // Periodically fetch updates
         setInterval(() => {
-            socket.emit('get_updated_data', {}, function(data) {
+            socket.emit('get_updated_data', {}, function (data) {
                 updateProblemStatements(data);
             });
         }, 5000);
     </script>
 </body>
+
 </html>
