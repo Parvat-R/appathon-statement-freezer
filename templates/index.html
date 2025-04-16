@@ -1,6 +1,7 @@
 <!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +11,47 @@
         body {
             padding-top: 50px;
         }
+
         .login-form {
             max-width: 400px;
             margin: 0 auto;
             padding: 15px;
-            border: 1px solid #ddd;
+            border: 1px solid #ddd0;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button.btn.btn-primary.w-100 {
+            width: 60% !important;
+            border-radius: 25px;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .mb-3 {
+            width: 80%;
+        }
+
+        input {
+            border-radius: 20px !important;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="login-form">
             <h2 class="text-center mb-4">Problem Statement Selection</h2>
-            
+
             {% if error %}
             <div class="alert alert-danger">{{ error }}</div>
             {% endif %}
-            
+
             <form action="/login" method="post">
                 <div class="mb-3">
                     <label for="team_id" class="form-label">Team ID</label>
@@ -43,4 +66,5 @@
         </div>
     </div>
 </body>
+
 </html>
