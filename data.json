@@ -3,7 +3,7 @@
         "id": "PS01",
         "name": "Mobile Application for Clinic Appointment Management",
         "description": "Develop a mobile application to improve productivity, enhance patient experience and enable data analytics by streamlining appointment scheduling, patient flow, and communication at a clinic.",
-        "limit": 3,
+        "limit": 4,
         "teams": [],
         "open": true
     },
@@ -59,7 +59,7 @@
         "id": "PS08",
         "name": "Hospital Memo Issuing & Tracking System",
         "description": "Build a web-based role-driven application that enables hospital staff to raise non-medical memos, route them to the right departments, allow responders to act, tag others, or escalate when required.",
-        "limit": 3,
+        "limit": 4,
         "teams": [],
         "open": true
     },
@@ -75,7 +75,7 @@
         "id": "PS10",
         "name": "B2B Jewelry Catalog Mobile Application",
         "description": "Develop a Flutter-based cross-platform mobile application for jewelry manufacturers to showcase their product catalog to B2B customers (wholesalers), with features for product listing, search and filtering, detailed product views, and user actions like favoriting items and sending enquiries.",
-        "limit": 3,
+        "limit": 4,
         "teams": [],
         "open": true
     },
