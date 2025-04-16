@@ -83,7 +83,7 @@ def login():
     
     # Team login
     teams = load_teams()
-    if team_id in teams and teams[team_id] == email:
+    if team_id.upper() in teams and teams[team_id.upper()].lower() == email.lower().strip():
         session['team_id'] = team_id
         return redirect(url_for('team_dashboard'))
     

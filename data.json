@@ -1,32 +1,89 @@
 {
     "PS01": {
         "id": "PS01",
-        "name": "Smart Traffic Management System",
-        "description": "Design an IoT-based smart traffic management system that can optimize traffic flow in urban areas by analyzing real-time data and adjusting signal timings to reduce congestion.",
-        "limit": 2,
-        "teams": [
-            "team202",
-            "team101"
-        ],
+        "name": "Mobile Application for Clinic Appointment Management",
+        "description": "Develop a mobile application to improve productivity, enhance patient experience and enable data analytics by streamlining appointment scheduling, patient flow, and communication at a clinic.",
+        "limit": 3,
+        "teams": [],
         "open": true
     },
     "PS02": {
         "id": "PS02",
-        "name": "Waste Segregation AI",
-        "description": "Develop an AI-powered system that can automatically identify and segregate different types of waste (plastic, metal, paper, organic) to improve recycling efficiency in waste management plants.",
+        "name": "Mobile Application for Clinic Fee Collection",
+        "description": "Develop a mobile application to manage fees collection at a clinic, efficiently collect payments and issue receipts in addition to facilitating data analytics.",
         "limit": 3,
-        "teams": [
-            "team303",
-            "team505",
-            "team606"
-        ],
+        "teams": [],
         "open": true
     },
     "PS03": {
         "id": "PS03",
-        "name": "Flood Prediction Platform",
-        "description": "Create a machine learning model that can predict potential flood situations based on historical data, weather patterns, and geographical information to provide early warnings to residents in flood-prone areas.",
-        "limit": 2,
+        "name": "Mobile Password Manager with Advanced Login Monitoring",
+        "description": "Develop a mobile password manager application that securely stores user credentials for multiple websites/applications, auto-fills them when needed, and tracks login time and location for security monitoring.",
+        "limit": 3,
+        "teams": [],
+        "open": true
+    },
+    "PS04": {
+        "id": "PS04",
+        "name": "External Hardware Device Detection",
+        "description": "Develop a system that automatically detects and displays connected external devices like Wi-Fi adapters, Bluetooth devices, USB drives, monitors and printers along with their device name and details.",
+        "limit": 3,
+        "teams": [],
+        "open": true
+    },
+    "PS05": {
+        "id": "PS05",
+        "name": "Voice to Text Conversion",
+        "description": "Develop a system capable of recording voice conversations and converting them into text in real time, accurately transcribing speech and distinguishing between different speakers without using specified libraries.",
+        "limit": 3,
+        "teams": [],
+        "open": true
+    },
+    "PS06": {
+        "id": "PS06",
+        "name": "Image to Text Conversion and Medical Data Generation",
+        "description": "Create a system that extracts text from images such as medical reports, prescriptions, or handwritten notes, and converts them into structured digital format for easier storage, retrieval, and processing.",
+        "limit": 3,
+        "teams": [],
+        "open": true
+    },
+    "PS07": {
+        "id": "PS07",
+        "name": "Database Encryption",
+        "description": "Implement encryption for health-related data in databases, including patient name, medical history, and diagnosis, to ensure privacy and prevent unauthorized access while allowing authorized users to see decrypted data.",
+        "limit": 3,
+        "teams": [],
+        "open": true
+    },
+    "PS08": {
+        "id": "PS08",
+        "name": "Hospital Memo Issuing & Tracking System",
+        "description": "Build a web-based role-driven application that enables hospital staff to raise non-medical memos, route them to the right departments, allow responders to act, tag others, or escalate when required.",
+        "limit": 3,
+        "teams": [],
+        "open": true
+    },
+    "PS09": {
+        "id": "PS09",
+        "name": "Residential Visitor and Parking Token Management System",
+        "description": "Develop a digital, role-driven system that enables residents to pre-register visitors and vehicles, security staff to validate entries and issue parking tokens, and admins to configure access and analyze visit trends.",
+        "limit": 3,
+        "teams": [],
+        "open": true
+    },
+    "PS10": {
+        "id": "PS10",
+        "name": "B2B Jewelry Catalog Mobile Application",
+        "description": "Develop a Flutter-based cross-platform mobile application for jewelry manufacturers to showcase their product catalog to B2B customers (wholesalers), with features for product listing, search and filtering, detailed product views, and user actions like favoriting items and sending enquiries.",
+        "limit": 3,
+        "teams": [],
+        "open": true
+    },
+    "PS11": {
+        "id": "PS11",
+        "name": "Jewelry Comparison Feature in B2B Mobile Application",
+        "description": "Implement a feature that allows users to select multiple jewelry items and compare them side by side, displaying relevant attributes like product image, gold karatage, diamond/gemstone weight, total price, and labor cost to help users make informed decisions.",
+        "limit": 3,
         "teams": [],
         "open": true
     }
